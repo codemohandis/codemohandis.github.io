@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Mehdi | Systems Architect & Automation Engineer</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        body {
+            background-color: #020617; /* slate-950 */
+            color: #cbd5e1; /* slate-300 */
+        }
+        ::selection {
+            background-color: rgba(16, 185, 129, 0.3); /* emerald-500/30 */
+        }
+    </style>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="relative min-h-screen font-sans antialiased">
+    
+    <!-- Background Effects -->
+    <div class="fixed inset-0 z-0 pointer-events-none">
+        <div class="absolute top-0 z-[-2] h-screen w-screen bg-slate-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(16,185,129,0.15),rgba(255,255,255,0))]"></div>
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-30 [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+    </div>
+
+    <div class="relative z-10">
+        <!-- Navigation / Header -->
+        <header class="fixed top-0 w-full border-b border-slate-800/50 bg-slate-950/80 backdrop-blur-md z-50">
+            <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+                <div class="font-mono font-bold text-xl text-slate-100 flex items-center gap-2">
+                    <i data-lucide="terminal" class="w-6 h-6 text-emerald-400"></i>
+                    <span>M.Mehdi</span>
+                </div>
+                <nav class="hidden md:flex items-center gap-8 text-sm font-mono text-slate-400">
+                    <a href="#projects" class="hover:text-emerald-400 transition-colors">Architecture</a>
+                    <a href="#stack" class="hover:text-emerald-400 transition-colors">Stack</a>
+                    <a href="#contact" class="hover:text-emerald-400 transition-colors">Contact</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <div class="hidden lg:flex items-center gap-2 bg-slate-900 border border-emerald-500/30 px-3 py-1.5 rounded-full text-xs font-mono text-emerald-400">
+                        <i data-lucide="bot" class="w-4 h-4"></i>
+                        <span>AI-Augmented Developer</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="pt-24 pb-12 px-6 max-w-6xl mx-auto space-y-24">
+            
+            <!-- Hero Section -->
+            <section class="min-h-[70vh] flex flex-col justify-center">
+                <div class="space-y-6 animate-fade-in-up">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-mono mb-4">
+                        <i data-lucide="code-2" class="w-4 h-4"></i>
+                        Out-of-the-Box Thinking
+                    </div>
+                    
+                    <h1 class="text-5xl md:text-7xl font-bold text-slate-100 tracking-tight">
+                        Mohammad Mehdi
+                    </h1>
+                    
+                    <div class="text-2xl md:text-3xl h-10">
+                        <span class="text-emerald-400 font-mono">
+                            <span id="typewriter"></span><span class="animate-pulse">_</span>
+                        </span>
+                    </div>
+
+                    <p class="max-w-2xl text-lg text-slate-400 leading-relaxed">
+                        Software Engineering graduate and systems thinker dedicated to transforming manual bottlenecks into automated digital workflows. Expert in data architecture, high-volume media processing, and multilingual (RTL) software design.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="#projects" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 px-6 py-3 rounded-lg font-medium transition-colors flex items-center gap-2">
+                            View Architecture <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="/resume.pdf" download="Mohammad_Mehdi_Resume.pdf" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-100 px-6 py-3 rounded-lg font-medium transition-colors flex items-center gap-2">
+                            <i data-lucide="download" class="w-4 h-4"></i> Resume
+                        </a>
+                        <a href="#contact" class="bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-100 px-6 py-3 rounded-lg font-medium transition-colors">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AI Badge Section -->
+            <section class="py-8 border-y border-slate-800/50">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="flex items-center gap-4">
+                        <div class="p-3 bg-emerald-500/10 rounded-xl border border-emerald-500/20">
+                            <i data-lucide="bot" class="w-8 h-8 text-emerald-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-100">Agentic Development</h3>
+                            <p class="text-sm text-slate-400">Early adopter of Claude Code & AI workflows</p>
+                        </div>
+                    </div>
+                    <p class="text-sm font-mono text-slate-500 max-w-md md:text-right">
+                        Accelerating development cycles and building complex, scalable systems through AI-driven agentic workflows and LLM prompt engineering.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Projects / Architecture Section -->
+            <section id="projects" class="space-y-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-100 flex items-center gap-3 mb-2">
+                        <i data-lucide="workflow" class="w-8 h-8 text-cyan-400"></i>
+                        Systems Logic
+                    </h2>
+                    <p class="text-slate-400 font-mono text-sm">Architecture & Automation Pipelines</p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6">
+                    <!-- Project 1 -->
+                    <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl hover:border-cyan-500/50 transition-colors group relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="relative z-10">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h3 class="text-xl font-bold text-slate-100 flex items-center gap-2">
+                                        <i data-lucide="smartphone" class="w-5 h-5 text-cyan-400"></i>
+                                        Noorbakhshia 365
+                                    </h3>
+                                    <p class="text-emerald-400/80 text-sm font-mono mt-1">Systems Architect & Data Engineer</p>
+                                </div>
+                            </div>
+                            <ul class="mb-6 space-y-2 text-sm text-slate-400">
+                                <li class="flex items-start gap-2"><i data-lucide="zap" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i> <span>Digitized 5,000+ pages of classical Inpage Files</span></li>
+                                <li class="flex items-start gap-2"><i data-lucide="zap" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i> <span>4.9★ rating and 40k+ active users</span></li>
+                                <li class="flex items-start gap-2"><i data-lucide="zap" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i> <span>Dual-language (Urdu/Arabic) search engine</span></li>
+                            </ul>
+                            <div class="bg-slate-950 rounded-lg p-4 font-mono text-xs border border-slate-800">
+                                <div class="text-slate-500 mb-2">// Pipeline Architecture</div>
+                                <div class="flex flex-col md:flex-row items-center gap-2 text-center md:text-left">
+                                    <div class="flex-1 bg-slate-900 p-3 rounded border border-slate-800 w-full">
+                                        <span class="text-cyan-400 block mb-1">Input</span>
+                                        <span class="text-slate-300">Inpage Files</span>
+                                    </div>
+                                    <i data-lucide="arrow-right" class="w-4 h-4 text-emerald-400 rotate-90 md:rotate-0 flex-shrink-0"></i>
+                                    <div class="flex-1 bg-slate-900 p-3 rounded border border-slate-800 w-full">
+                                        <span class="text-emerald-400 block mb-1">Process</span>
+                                        <span class="text-slate-300">SQL/JSON Data Pipeline</span>
+                                    </div>
+                                    <i data-lucide="arrow-right" class="w-4 h-4 text-emerald-400 rotate-90 md:rotate-0 flex-shrink-0"></i>
+                                    <div class="flex-1 bg-slate-900 p-3 rounded border border-slate-800 w-full">
+                                        <span class="text-cyan-400 block mb-1">Output</span>
+                                        <span class="text-slate-300">Offline-first Android App</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl hover:border-cyan-500/50 transition-colors group relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="relative z-10">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h3 class="text-xl font-bold text-slate-100 flex items-center gap-2">
+                                        <i data-lucide="database" class="w-5 h-5 text-cyan-400"></i>
+                                        Custom Data Transformation Toolkit
+                                    </h3>
+                                    <p class="text-emerald-400/80 text-sm font-mono mt-1">Lead Developer</p>
+                                </div>
+                            </div>
+                            <ul class="mb-6 space-y-2 text-sm text-slate-400">
+                                <li class="flex items-start gap-2"><i data-lucide="zap" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i> <span>Reduced manual data-entry time by 90%</span></li>
+                                <li class="flex items-start gap-2"><i data-lucide="zap" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i> <span>Solved complex logic challenges via Agentic workflows</span></li>
+                                <li class="flex items-start gap-2"><i data-lucide="zap" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i> <span>Normalized unstructured data into functional formats</span></li>
+                            </ul>
+                            <div class="bg-slate-950 rounded-lg p-4 font-mono text-xs border border-slate-800">
+                                <div class="text-slate-500 mb-2">// Pipeline Architecture</div>
+                                <div class="flex flex-col md:flex-row items-center gap-2 text-center md:text-left">
+                                    <div class="flex-1 bg-slate-900 p-3 rounded border border-slate-800 w-full">
+                                        <span class="text-cyan-400 block mb-1">Input</span>
+                                        <span class="text-slate-300">Unstructured 'Dead' Data</span>
+                                    </div>
+                                    <i data-lucide="arrow-right" class="w-4 h-4 text-emerald-400 rotate-90 md:rotate-0 flex-shrink-0"></i>
+                                    <div class="flex-1 bg-slate-900 p-3 rounded border border-slate-800 w-full">
+                                        <span class="text-emerald-400 block mb-1">Process</span>
+                                        <span class="text-slate-300">Python Scripts + Claude Code</span>
+                                    </div>
+                                    <i data-lucide="arrow-right" class="w-4 h-4 text-emerald-400 rotate-90 md:rotate-0 flex-shrink-0"></i>
+                                    <div class="flex-1 bg-slate-900 p-3 rounded border border-slate-800 w-full">
+                                        <span class="text-cyan-400 block mb-1">Output</span>
+                                        <span class="text-slate-300">Normalized Functional Formats</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl hover:border-cyan-500/50 transition-colors group relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="relative z-10">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h3 class="text-xl font-bold text-slate-100 flex items-center gap-2">
+                                        <i data-lucide="server" class="w-5 h-5 text-cyan-400"></i>
+                                        Automated Audio Archival System
+                                    </h3>
+                                    <p class="text-emerald-400/80 text-sm font-mono mt-1">Lead Architect</p>
+                                </div>
+                            </div>
+                            <ul class="mb-6 space-y-2 text-sm text-slate-400">
+                                <li class="flex items-start gap-2"><i data-lucide="zap" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i> <span>Automated processing of 1,000+ audio files</span></li>
+                                <li class="flex items-start gap-2"><i data-lucide="zap" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i> <span>Sequential renaming & ID3v2 metadata tagging</span></li>
+                                <li class="flex items-start gap-2"><i data-lucide="zap" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i> <span>Dynamic Web UI for hosted library streaming</span></li>
+                            </ul>
+                            <div class="bg-slate-950 rounded-lg p-4 font-mono text-xs border border-slate-800">
+                                <div class="text-slate-500 mb-2">// Pipeline Architecture</div>
+                                <div class="flex flex-col md:flex-row items-center gap-2 text-center md:text-left">
+                                    <div class="flex-1 bg-slate-900 p-3 rounded border border-slate-800 w-full">
+                                        <span class="text-cyan-400 block mb-1">Input</span>
+                                        <span class="text-slate-300">Raw Audio Files</span>
+                                    </div>
+                                    <i data-lucide="arrow-right" class="w-4 h-4 text-emerald-400 rotate-90 md:rotate-0 flex-shrink-0"></i>
+                                    <div class="flex-1 bg-slate-900 p-3 rounded border border-slate-800 w-full">
+                                        <span class="text-emerald-400 block mb-1">Process</span>
+                                        <span class="text-slate-300">Python + Claude Code Pipeline</span>
+                                    </div>
+                                    <i data-lucide="arrow-right" class="w-4 h-4 text-emerald-400 rotate-90 md:rotate-0 flex-shrink-0"></i>
+                                    <div class="flex-1 bg-slate-900 p-3 rounded border border-slate-800 w-full">
+                                        <span class="text-cyan-400 block mb-1">Output</span>
+                                        <span class="text-slate-300">Archive.org + Custom Web UI</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl hover:border-cyan-500/50 transition-colors group relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="relative z-10">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h3 class="text-xl font-bold text-slate-100 flex items-center gap-2">
+                                        <i data-lucide="globe" class="w-5 h-5 text-cyan-400"></i>
+                                        Social Media Automation Pipeline
+                                    </h3>
+                                    <p class="text-emerald-400/80 text-sm font-mono mt-1">Automation Engineer</p>
+                                </div>
+                            </div>
+                            <ul class="mb-6 space-y-2 text-sm text-slate-400">
+                                <li class="flex items-start gap-2"><i data-lucide="zap" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i> <span>Eliminated 100% of manual social media entries</span></li>
+                                <li class="flex items-start gap-2"><i data-lucide="zap" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i> <span>Implemented secure OAuth token management</span></li>
+                                <li class="flex items-start gap-2"><i data-lucide="zap" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i> <span>End-to-end scheduling via custom Web UI</span></li>
+                            </ul>
+                            <div class="bg-slate-950 rounded-lg p-4 font-mono text-xs border border-slate-800">
+                                <div class="text-slate-500 mb-2">// Pipeline Architecture</div>
+                                <div class="flex flex-col md:flex-row items-center gap-2 text-center md:text-left">
+                                    <div class="flex-1 bg-slate-900 p-3 rounded border border-slate-800 w-full">
+                                        <span class="text-cyan-400 block mb-1">Input</span>
+                                        <span class="text-slate-300">Custom Web UI / Sheets</span>
+                                    </div>
+                                    <i data-lucide="arrow-right" class="w-4 h-4 text-emerald-400 rotate-90 md:rotate-0 flex-shrink-0"></i>
+                                    <div class="flex-1 bg-slate-900 p-3 rounded border border-slate-800 w-full">
+                                        <span class="text-emerald-400 block mb-1">Process</span>
+                                        <span class="text-slate-300">Apps Script + OAuth</span>
+                                    </div>
+                                    <i data-lucide="arrow-right" class="w-4 h-4 text-emerald-400 rotate-90 md:rotate-0 flex-shrink-0"></i>
+                                    <div class="flex-1 bg-slate-900 p-3 rounded border border-slate-800 w-full">
+                                        <span class="text-cyan-400 block mb-1">Output</span>
+                                        <span class="text-slate-300">Meta Graph API Publishing</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Stack -->
+            <section id="stack" class="space-y-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-100 flex items-center gap-3 mb-2">
+                        <i data-lucide="layers" class="w-8 h-8 text-emerald-400"></i>
+                        Technical Stack
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-xl">
+                        <h3 class="text-cyan-400 font-mono mb-4 flex items-center gap-2">
+                            <i data-lucide="cpu" class="w-4 h-4"></i> Logic & Core
+                        </h3>
+                        <ul class="space-y-2 text-slate-300">
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>SQL</li>
+                            <li>Data Architecture</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-xl">
+                        <h3 class="text-emerald-400 font-mono mb-4 flex items-center gap-2">
+                            <i data-lucide="bot" class="w-4 h-4"></i> Automation & AI
+                        </h3>
+                        <ul class="space-y-2 text-slate-300">
+                            <li>Claude Code</li>
+                            <li>Agentic Workflows</li>
+                            <li>LLM Prompt Engineering</li>
+                            <li>Google Apps Script</li>
+                            <li>Meta Graph API</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-xl">
+                        <h3 class="text-purple-400 font-mono mb-4 flex items-center gap-2">
+                            <i data-lucide="code-2" class="w-4 h-4"></i> Full-Stack & Specialized
+                        </h3>
+                        <ul class="space-y-2 text-slate-300">
+                            <li>HTML / CSS</li>
+                            <li>RTL Typography (Urdu/Arabic)</li>
+                            <li>ID3v2 Tagging</li>
+                            <li>Cloud Archival</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section class="space-y-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-100 flex items-center gap-3 mb-2">
+                        <i data-lucide="graduation-cap" class="w-8 h-8 text-cyan-400"></i>
+                        Education & Logic
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="border-l-2 border-emerald-500/30 pl-6 py-2">
+                        <h3 class="text-xl font-bold text-slate-100">BS in Software Engineering</h3>
+                        <p class="text-emerald-400 font-mono text-sm mt-1">Mohammad Ali Jinnah University | 2014 - 2018</p>
+                    </div>
+                    
+                    <div class="border-l-2 border-cyan-500/30 pl-6 py-2">
+                        <h3 class="text-xl font-bold text-slate-100">Dars-e-Nizami</h3>
+                        <p class="text-cyan-400 font-mono text-sm mt-1">Almustafa International University | 2022</p>
+                        <p class="text-slate-400 text-sm mt-2">Classical Islamic Studies & Arabic (Logic)</p>
+                    </div>
+
+                    <div class="border-l-2 border-slate-700 pl-6 py-2">
+                        <h3 class="text-xl font-bold text-slate-100">Full-Stack Development Track</h3>
+                        <p class="text-slate-400 font-mono text-sm mt-1">In Progress</p>
+                    </div>
+
+                    <div class="border-l-2 border-slate-700 pl-6 py-2">
+                        <h3 class="text-xl font-bold text-slate-100">AI Engineering Specialization</h3>
+                        <p class="text-slate-400 font-mono text-sm mt-1">In Progress</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Languages & Localization -->
+            <section class="space-y-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-100 flex items-center gap-3 mb-2">
+                        <i data-lucide="globe" class="w-8 h-8 text-cyan-400"></i>
+                        Languages & Localization
+                    </h2>
+                    <p class="text-slate-400 font-mono text-sm">Multilingual RTL Software Design & Communication</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- English -->
+                    <div class="bg-slate-900/50 border border-slate-800 p-5 rounded-xl flex items-center justify-between hover:border-emerald-500/30 transition-colors">
+                        <span class="text-slate-300 font-medium">English</span>
+                        <div class="flex gap-1.5">
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
+                        </div>
+                    </div>
+                    <!-- Urdu -->
+                    <div class="bg-slate-900/50 border border-slate-800 p-5 rounded-xl flex items-center justify-between hover:border-emerald-500/30 transition-colors">
+                        <span class="text-slate-300 font-medium">Urdu</span>
+                        <div class="flex gap-1.5">
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
+                        </div>
+                    </div>
+                    <!-- Balti -->
+                    <div class="bg-slate-900/50 border border-slate-800 p-5 rounded-xl flex items-center justify-between hover:border-emerald-500/30 transition-colors">
+                        <span class="text-slate-300 font-medium">Balti</span>
+                        <div class="flex gap-1.5">
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
+                        </div>
+                    </div>
+                    <!-- Persian / Farsi -->
+                    <div class="bg-slate-900/50 border border-slate-800 p-5 rounded-xl flex items-center justify-between hover:border-emerald-500/30 transition-colors">
+                        <span class="text-slate-300 font-medium">Persian / Farsi</span>
+                        <div class="flex gap-1.5">
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
+                            <div class="w-2 h-2 rounded-full bg-slate-800"></div>
+                        </div>
+                    </div>
+                    <!-- Arabic -->
+                    <div class="bg-slate-900/50 border border-slate-800 p-5 rounded-xl flex items-center justify-between hover:border-emerald-500/30 transition-colors">
+                        <span class="text-slate-300 font-medium">Arabic</span>
+                        <div class="flex gap-1.5">
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
+                            <div class="w-2 h-2 rounded-full bg-slate-800"></div>
+                            <div class="w-2 h-2 rounded-full bg-slate-800"></div>
+                            <div class="w-2 h-2 rounded-full bg-slate-800"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Form Section -->
+            <section id="contact" class="space-y-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-100 flex items-center gap-3 mb-2">
+                        <i data-lucide="mail" class="w-8 h-8 text-emerald-400"></i>
+                        Initiate Connection
+                    </h2>
+                    <p class="text-slate-400 font-mono text-sm">Send a transmission directly to my inbox.</p>
+                </div>
+
+                <div class="bg-slate-900/50 border border-slate-800 p-6 md:p-8 rounded-xl max-w-2xl">
+                    
+                    <!-- Success Message -->
+                    <div id="success-message" class="hidden bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-6 text-center transition-all duration-500">
+                        <i data-lucide="bot" class="w-12 h-12 text-emerald-400 mx-auto mb-4"></i>
+                        <h3 class="text-xl font-bold text-slate-100 mb-2">Transmission Received</h3>
+                        <p class="text-slate-400 font-mono text-sm">I will process your message and respond shortly.</p>
+                    </div>
+                    
+                    <!-- Form -->
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-sm font-mono text-cyan-400">Name</label>
+                                <!-- TODO: 2. Replace name="entry.111111111" with your Google Form Name entry ID -->
+                                <input type="text" name="entry.750973084" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-300 focus:outline-none focus:border-emerald-500 transition-colors" placeholder="Enter your name">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-mono text-cyan-400">Email</label>
+                                <!-- TODO: 3. Replace name="entry.222222222" with your Google Form Email entry ID -->
+                                <input type="email" name="entry.222222222" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-300 focus:outline-none focus:border-emerald-500 transition-colors" placeholder="Enter your email">
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-mono text-cyan-400">Message</label>
+                            <!-- TODO: 4. Replace name="entry.333333333" with your Google Form Message entry ID -->
+                            <textarea name="entry.333333333" required rows="4" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-300 focus:outline-none focus:border-emerald-500 transition-colors resize-none" placeholder="Enter your message..."></textarea>
+                        </div>
+                        <button id="submit-btn" type="submit" class="w-full bg-emerald-500 hover:bg-emerald-400 disabled:bg-emerald-500/50 disabled:cursor-not-allowed text-slate-950 font-bold py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
+                            <i data-lucide="zap" class="w-5 h-5"></i>
+                            <span id="btn-text">Transmit Message</span>
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="border-t border-slate-800/50 bg-slate-900/50 py-12 mt-12">
+            <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div>
+                    <div class="font-mono font-bold text-xl text-slate-100 flex items-center gap-2 mb-2">
+                        <i data-lucide="terminal" class="w-5 h-5 text-emerald-400"></i>
+                        <span>M.Mehdi</span>
+                    </div>
+                    <p class="text-slate-500 text-sm">Systems Architect & Automation Engineer</p>
+                </div>
+                
+                <div class="flex items-center gap-6">
+                    <a href="mailto:mohammad.mehdi.prof@gmail.com" class="text-slate-400 hover:text-emerald-400 transition-colors flex items-center gap-2">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                        <span class="hidden md:inline">Email</span>
+                    </a>
+                    <a href="https://linkedin.com/in/engmohammadmehdi" target="_blank" rel="noreferrer" class="text-slate-400 hover:text-cyan-400 transition-colors flex items-center gap-2">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        <span class="hidden md:inline">LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/codemohandis" target="_blank" rel="noreferrer" class="text-slate-400 hover:text-slate-100 transition-colors flex items-center gap-2">
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                        <span class="hidden md:inline">GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Typewriter Effect
+        const texts = ["Systems Architect", "Automation Specialist", "AI Engineer"];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typeWriterElement = document.getElementById('typewriter');
+
+        function type() {
+            const currentText = texts[textIndex];
+            if (!isDeleting) {
+                typeWriterElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+                if (charIndex === currentText.length) {
+                    isDeleting = true;
+                    setTimeout(type, 2000);
+                    return;
+                }
+            } else {
+                typeWriterElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+                if (charIndex === 0) {
+                    isDeleting = false;
+                    textIndex = (textIndex + 1) % texts.length;
+                }
+            }
+            setTimeout(type, isDeleting ? 50 : 100);
+        }
+        
+        // Start typing effect
+        setTimeout(type, 500);
+
+        // Google Form Submission Logic
+        const form = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const btnText = document.getElementById('btn-text');
+        const successMsg = document.getElementById('success-message');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            btnText.textContent = "Transmitting...";
+            
+            const formData = new FormData(form);
+            
+            // TODO: 1. Replace this URL with your Google Form's action URL
+            const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/YOUR_FORM_ID_HERE/formResponse";
+
+            try {
+                // Use no-cors to bypass CORS restrictions for Google Forms
+                await fetch(GOOGLE_FORM_ACTION_URL, {
+                    method: "POST",
+                    mode: "no-cors",
+                    body: formData
+                });
+                
+                // Hide form, show success message
+                form.style.display = 'none';
+                successMsg.classList.remove('hidden');
+                
+                // Reset after 5 seconds
+                setTimeout(() => {
+                    form.reset();
+                    form.style.display = 'block';
+                    successMsg.classList.add('hidden');
+                }, 5000);
+            } catch (error) {
+                console.error("Error submitting form", error);
+                alert("Something went wrong. Please try emailing me directly.");
+            } finally {
+                // Re-enable button
+                submitBtn.disabled = false;
+                btnText.textContent = "Transmit Message";
+            }
+        });
+    </script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
